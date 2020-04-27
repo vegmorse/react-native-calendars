@@ -209,7 +209,7 @@ export default class AgendaView extends Component {
     }
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this._isMounted = true;
     this.loadReservations(this.props);
   }
@@ -218,7 +218,7 @@ export default class AgendaView extends Component {
     this._isMounted = false;
   }
 
-  componentWillReceiveProps(props) {
+  UNSAFE_componentWillReceiveProps(props) {
     if (props.items) {
       this.setState({
         firstResevationLoad: false
